@@ -1,9 +1,9 @@
 "use client";
 import Header from "@/components/header/Header";
 import Topic from "@/components/topic/Topic";
-import { LoginContainer, LoginForm, WelcomeBox } from "./styles/pages/login";
-import Link from "next/link";
 import Carousel from "@/components/carousel/Carousel";
+import { Container, ContainerRecipes, Divider } from "./styles/pages/page";
+import Card from "@/components/card/Card";
 
 export default function Home() {
   return (
@@ -11,7 +11,19 @@ export default function Home() {
       <Header />
       <Topic />
       <Carousel />
-      <main></main>
+      <Container>
+        <Divider />
+        <h1>Top 5 Receitas</h1>
+        <ContainerRecipes>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </ContainerRecipes>
+      </Container>
     </>
   );
 }

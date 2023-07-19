@@ -24,7 +24,7 @@ export default function Header() {
               <UserPlus />
               <span>Cadastre - se</span>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/login"}>
               <SignIn />
               <span>Entrar</span>
             </Link>

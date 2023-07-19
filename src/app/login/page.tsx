@@ -1,6 +1,6 @@
 import Header from "@/components/header/Header";
 import Link from "next/link";
-import { LoginContainer, LoginForm, WelcomeBox } from "./styles/pages/login";
+import { LoginContainer, LoginForm, WelcomeBox } from "../styles/pages/login";
 
 export default function Login() {
   return (

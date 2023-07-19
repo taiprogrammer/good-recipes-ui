@@ -1,6 +1,7 @@
 import { styled } from "..";
 
 export const Wrapper = styled("div", {
+  margin: "1rem 0",
   position: "relative",
 });
 
@@ -13,6 +14,14 @@ export const Slide = styled("div", {
   alignItems: "center",
   justifyContent: "center",
 
-  height: "37.5rem",
+  height: "38.8rem",
   maxHeight: "100vh",
+
+  img: {
+    cursor: "pointer",
+
+    "&:hover": {
+      opacity: 0.8,
+    },
+  },
 });
