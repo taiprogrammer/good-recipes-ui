@@ -8,14 +8,28 @@ import Image from "next/image";
 import Teste from "../../assets/no-image/cover.png";
 import { ForkKnife, Heart, Timer } from "phosphor-react";
 
-export default function Card() {
+export default function Card({
+  nome,
+  horas,
+  minutos,
+  segundos,
+  porcoes,
+  imagem,
+}: RecipeCard) {
+  const imageSource = `http://localhost:8080/${imagem}`;
+  console.log(imageSource);
   return (
     <Wrapper>
       <div className="container">
-        <Image src={Teste} width={250} height={250} alt="" />
+        {imagem === null ? (
+          <Image src={Teste} width={250} height={250} alt="" />
+        ) : (
+          <Image src={imageSource} width={250} height={250} alt="" />
+        )}
+
         <Heart size={24} className="favorite-blank" />
         <InfoContainer>
-          <Title>Nome da receita</Title>
+          <Title>{nome}</Title>
           <Info>
             <p>
               <Timer size={16} />
@@ -23,7 +37,7 @@ export default function Card() {
             </p>
             <p>
               <ForkKnife size={16} />
-              <span>10 porções</span>
+              <span>{porcoes} porções</span>
             </p>
           </Info>
         </InfoContainer>
