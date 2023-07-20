@@ -11,7 +11,7 @@ import Image from "next/image";
 import { Heart, Notepad, SignIn, UserGear, UserPlus } from "phosphor-react";
 
 export default function Header() {
-  const logged = false;
+  const logged = localStorage.token ? true : false;
   return (
     <HeaderComponent>
       <HeaderContainer>

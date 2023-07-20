@@ -13,7 +13,7 @@ export default function Home() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
 
   async function getRecipes() {
-    const response = api.get("/recipe");
+    const response = api.get("/recipe/recents");
     if ((await response).status === 200) {
       setRecipes((await response).data);
     }
@@ -32,7 +32,6 @@ export default function Home() {
         <h1>Top Receitas</h1>
         <ContainerRecipes>
           {recipes.map((recipe) => {
-
             return (
               <Card
                 nome={recipe.nome}

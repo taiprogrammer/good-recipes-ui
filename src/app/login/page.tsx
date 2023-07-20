@@ -9,13 +9,14 @@ import LoginCover from "../../assets/cover-login.jpg";
 import { api } from "../lib/axios";
 import { useRouter } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
-import { ChangeEvent, MouseEvent, useState } from "react";
+import { ChangeEvent, createRef, MouseEvent, useRef, useState } from "react";
 import { LoginContainer, LoginForm, WelcomeBox } from "../styles/pages/login";
 
 export default function Login() {
   const [email, setEmail] = useState<string>("");
   const [senha, setSenha] = useState<string>("");
   const router = useRouter();
+  const buttonRef = useRef();
 
   async function handleLogin({ email, senha }: Credentials, event: MouseEvent) {
     event.preventDefault();
@@ -32,8 +33,11 @@ export default function Login() {
         .post("/user/login", { email, senha })
         .then((response) => {
           const token = response.data.token;
+          buttonRef.current.innerHTML = "Redirecionando...";
           localStorage.token = JSON.stringify(token);
-          router.push("/");
+          setTimeout(() => {
+            router.push("/");
+          }, 1500);
         })
         .catch((error) => {
           if (error) {
@@ -81,6 +85,7 @@ export default function Login() {
                 </div>
                 <button
                   onClick={(event) => handleLogin({ email, senha }, event)}
+                  ref={buttonRef}
                 >
                   Entrar
                 </button>
