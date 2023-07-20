@@ -10,10 +10,14 @@ export const WelcomeBox = styled("div", {
   display: "flex",
   marginTop: "3rem",
   marginBottom: "3rem",
+
+  div: {
+    width: "100%",
+  },
 });
 
 export const LoginForm = styled("form", {
-  width: "100%",
+  width: "75%",
   alignSelf: "center",
 
   h1: {
@@ -39,9 +43,14 @@ export const LoginForm = styled("form", {
   },
 
   button: {
+    border: "0",
+    borderRadius: "0.2rem",
+
+    cursor: "pointer",
+
     marginTop: "1rem",
     color: "$gray090",
-    padding: "0.5rem 3rem",
+    padding: "0.6rem 3rem",
     background: "$green750",
 
     transition: "all 0.3s ease-in-out",

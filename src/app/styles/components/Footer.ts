@@ -40,7 +40,7 @@ export const FooterWrapper = styled("footer", {
 
 export const Wrapper = styled("div", {
   width: "90%",
-  margin: "0 auto",
+  margin: "1rem auto",
 });
 
 export const FooterContent = styled("section", {

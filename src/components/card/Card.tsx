@@ -17,7 +17,6 @@ export default function Card({
   imagem,
 }: RecipeCard) {
   const imageSource = `http://localhost:8080/${imagem}`;
-  console.log(imageSource);
   return (
     <Wrapper>
       <div className="container">

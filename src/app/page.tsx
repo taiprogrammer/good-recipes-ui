@@ -32,7 +32,6 @@ export default function Home() {
         <h1>Top Receitas</h1>
         <ContainerRecipes>
           {recipes.map((recipe) => {
-            console.log(recipe);
 
             return (
               <Card
