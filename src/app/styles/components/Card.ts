@@ -26,7 +26,8 @@ export const Wrapper = styled("div", {
 
   "svg.favorite-blank": {
     position: "absolute",
-    right: 0,
+    right: "0.5rem",
+    bottom: "1rem",
 
     padding: "0.5rem",
     color: "$red500",
