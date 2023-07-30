@@ -1,32 +1,38 @@
 import { styled } from "..";
 
-export const LoginContainer = styled("div", {
+export const SignUpContainer = styled("div", {
   width: "90%",
   margin: "0 auto",
 });
 
-export const WelcomeBox = styled("div", {
+export const SignUpBox = styled("div", {
   gap: "10rem",
   display: "flex",
-  marginTop: "3rem",
-  marginBottom: "3rem",
+  margin: "5rem 0",
 
   div: {
     width: "100%",
   },
 });
 
-export const LoginForm = styled("form", {
+export const Title = styled("h1", {
+  color: "$green250",
+  fontFamily: "'Anton', sans-serif",
+});
+
+export const SignUpForm = styled("form", {
   width: "75%",
   alignSelf: "center",
 
-  h1: {
-    color: "$green250",
-    fontFamily: "'Anton', sans-serif",
-  },
+  marginTop: "1rem",
 
   "div + div": {
-    marginTop: "1rem",
+    marginTop: "0.5rem",
+  },
+
+  div: {
+    display: "flex",
+    flexDirection: "column",
   },
 
   input: {
@@ -68,11 +74,9 @@ export const LoginForm = styled("form", {
   "p, a": {
     fontSize: "0.9rem",
   },
-
   p: {
     color: "$textMedium",
   },
-
   a: {
     color: "$green400",
     textDecoration: "none",

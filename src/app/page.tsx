@@ -6,7 +6,6 @@ import { Container, ContainerRecipes, Divider } from "./styles/pages/page";
 import Card from "@/components/card/Card";
 import Footer from "@/components/footer/Footer";
 import { api } from "./lib/axios";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -44,24 +43,10 @@ export default function Home() {
               />
             );
           })}
-          {/* <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card /> */}
         </ContainerRecipes>
         <Divider />
         <h1>Recentes</h1>
         <ContainerRecipes>
-          {/* <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card /> */}
         </ContainerRecipes>
       </Container>
       <Footer />

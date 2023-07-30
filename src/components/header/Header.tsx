@@ -20,7 +20,7 @@ export default function Header() {
         </Link>
         {!logged ? (
           <nav>
-            <Link href={"/"}>
+            <Link href={"/signup"}>
               <UserPlus />
               <span>Cadastre - se</span>
             </Link>
