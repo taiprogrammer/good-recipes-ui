@@ -9,7 +9,7 @@ import LoginCover from "../../assets/cover-login.jpg";
 import { api } from "../lib/axios";
 import { useRouter } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
-import { ChangeEvent, createRef, MouseEvent, useRef, useState } from "react";
+import { ChangeEvent, MouseEvent, useRef, useState } from "react";
 import { LoginContainer, LoginForm, WelcomeBox } from "../styles/pages/login";
 
 export default function Login() {
